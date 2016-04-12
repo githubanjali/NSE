@@ -9,8 +9,9 @@ from decimal import Decimal
 
 class stock(models.Model):
 	name = models.CharField(max_length = 50)
-	price = models.DecimalField(max_digits = 20, decimal_places = 4)
-	max_price_of_day = models.DecimalField(max_digits= 20, decimal_places = 4)
+	price = models.DecimalField(max_digits = 20, decimal_places = 4 , default = 00.00)
+	max_price_of_day = models.DecimalField(max_digits= 20, decimal_places = 4, default = 00.00)
+
 	def __unicode__(self):
 		return self.name
 
